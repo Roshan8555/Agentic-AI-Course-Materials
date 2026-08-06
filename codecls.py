@@ -498,7 +498,7 @@ print(details['age'])
 data = {'Age':23,'name':"roshan",'Age':22}
 print(data) #here the output we get is age is 22 only because it will data the recent update value only for duplicates 
 #in dictionary "we do index by using keys".
-'''
+
 #create dictionaries using other datatypes
 students_data = {'ids':[23,23,45,43],
                  'names':['roshan','surya','sai','venky'],
@@ -585,22 +585,125 @@ data {
           'place':'blr'}}
 print(data.keys())
 
+#Control statements --> These are the statements which control the flow of execution of the program
+
+#--> Conditional statements (if,elif,else) -->Nested if statements
+#--> Repetition Statements (Loops) --> for,while,Nested loops (patterns)
+#--> Jumping Statements --> break,continue,pass,assert
+
+if statements:
+
+    if <condition>:
+        statement(s)..
+        ........
+        ....
+.........
+#validate the price
+#money = 100
+
+money = int(input("enter the biling value:"))
+if money <=100:
+   print(f'now you are eligible to get your items')
+print('check again')
+
+student = ['ram','roshan','sai','venky']
+name = input('enter the student name:').lower()
+if name in student:
+    marks = 50
+    grade = 'A'
+    print(f'{name} has secured {marks} marks and {grade} grade')
+
+#vote eligibility
+#user will enter his/her age --> give voter eligibility
+age = int(input("enter the age :"))
+if age >=18:
+          print(f'you are eligible to vote')
+          print("your age is {} years,eligible",format(age))
+else:
+        print("you are not eligible to vote")
+
+#nested conditions --> one condition inside another --> if,else
+
+syntax:
+
+if condition :
+    if condition2:
+        ststement(s)...
+        ....
+    elif condition3...:
+        statement(s)...
+        ....
+    ....
+else:
+    statement(s)...
+    ....
+...
+#check whether card is valid or not -->entered pin is correct or not -->check balance
+#-->withdrawl
+
+pin = 1233
+
+if pin == 1234:
+    print("Entered PIN is valid.")
+    print("Check balance...")
+else:
+    print("Entered PIN is invalid.")
+
+pin = 1234
+balance = 10000
+
+entered_pin = int(input("Enter your PIN: "))
+
+if entered_pin ==1234:
+    print("PIN is correct.")
+    print("Your balance is:", balance)
+
+    amount = int(input("Enter withdrawal amount: "))
+
+    if amount <= balance:
+        balance = balance - amount
+        print("Withdrawal successful.")
+        print("Remaining balance:", balance)
+    else:
+        print("Insufficient balance.")
+
+else:
+    print("Invalid PIN.")
 
 
+card_inserted = True
+correct_pin = True
+balance = 10000
+withdrawal_amount = int(input("enter the amount to withdraw:"))
+if card inserted:
+    if correct_pin:
+        if balance > with_drawl_amount:
+            print(f'Transaction is successful,New balance is {balance - withdrawal_amount})
+        else:
+            print(f'Transaction failed, please maintain sufficient balance')
+    else:
+        print(f'wrong PIN entered')
+else:
+    print(f'your card is not in use')
+'''            
+#trip budget suggested plan
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+budget = float(input("enter the budget:"))
+if budget > 10000:
+               print("plan:Trip")
+elif budget > 5000:
+    print("plan:resort stay")
+elif budget > 3000:
+    print("plan:movie and dinner")
+elif budget > 1000:
+    print("plan:cafe and shopping")
+elif budget > 500:
+    print("plan:street food and park visit")
+elif budget == 0:
+    print("plan:stay home")
+else:
+    print("entered budget is incorrect")
+    
 
 
 
